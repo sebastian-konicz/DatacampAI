@@ -2,7 +2,7 @@ import os
 import time
 import pandas as pd
 from datetime import datetime
-import openai
+import openai_api
 # from openai.error import APIError, APITimeoutError
 # start time of function
 start_time = time.time()
@@ -34,7 +34,7 @@ Zwróć wyniki w formie tabelarycznej, gdzie w pierwszym wierszu odpowiedzi będ
 
 print(prompt)
 
-response = openai.chat.completions.create(
+response = openai_api.chat.completions.create(
     model="gpt-4o",  # lub inny dostępny model
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
